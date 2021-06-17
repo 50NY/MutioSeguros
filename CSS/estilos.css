@@ -3,6 +3,7 @@
 
 :root{
   --color-background: #Eff6f5;
+  --color-btn: #0074BD;
 }
 
 
@@ -38,5 +39,20 @@ body{
   font-size: 14px;
   font-weight: 700;
   padding: 15px 30px;
+  background-color: var(--color-btn);
+  color: white;
   outline: none;
+  border: 2px solid var(--color-btn);
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  transition: all 0.3s;
+}
+
+.btn:hover{
+  padding: 15px 50px;
+}
+
+.btn span{
+  padding-left: 10px;
 }
