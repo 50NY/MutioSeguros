@@ -180,6 +180,7 @@ body{
     display: flex;
     overflow: hidden;
     height: calc(100vh -80px); /*le resto el espacio que ocupa mi menu superior para que luego calcule el espacio restante de la pantalla y lo ocupe*/
+    scroll-behavior: smooth; /*Esta propiedad detecta que hay un scroll, aplicando el smooth este realiza el scroll con una leve trancision*/
   }
   
   .contenedor-productos{
@@ -195,7 +196,7 @@ body{
   }
 
   .descripcion-productos h1{
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 600;
     text-transform: uppercase;
   }
@@ -295,7 +296,39 @@ body{
     font-size: 20px;
   }
   
+/*SLIDER PARA DISPOSITIVOS MOVILES (RESPONSIVE RESOLUCION 650PX)*/
+.slider{
+  height: calc(100vh - 600px);
+}
+.imagen-productos{
+  width: 65%;
 }
 
+
+
+
+
+}
+
+/*SLIDER PARA DISPOSITIVOS MOVILES (RESPONSIVE RESOLUCION 850PX)*/
+
+@media screen and (max-width: 850px){
+  .contenedor-productos{
+    flex-direction:column;
+  }
+
+  .descripcion-productos{
+    width: 70%;
+    order: 1;
+  }
+
+  .descripcion-productos .btn{
+    padding: 10px 20px;
+  }
+
+  .descripcion-productos .btn:hover{
+    padding: 10px 30px;
+  }
+}
 
 

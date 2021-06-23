@@ -23,6 +23,22 @@ var   btnMenuOpen = document.getElementById("btnMenuOpen"),
         menuResponsive.classList.remove("active");
       });
 
+      
+// SLIDER DE PRODUCTOS
+
+var contenedor= document.querySelector('.slider');
+var btnIzquierdo= document.getElementById("btn-izquierda");
+var btnDerecho= document.getElementById("btn-derecha");
+
+// EVENTO PARA EL BOTON DERECHO 
+
+btnDerecho.addEventListener("click", function (){
+  contenedor.scrollLeft += contenedor.offsetWidth;
+});
+
+btnIzquierdo.addEventListener("click", function (){
+  contenedor.scrollLeft -= contenedor.offsetWidth;
+});
 
 
 
