@@ -75,7 +75,7 @@ body{
 
 .logo img{
   cursor: pointer;
-  width: 210px;
+  width: 160px;
 }
 
 .menu-navegacion{
@@ -230,7 +230,98 @@ body{
   }
 
 
+  /*SECCION SERVICIOS*/
 
+  #servicios{
+    height: 100vh;
+    background: #fff;
+    padding: 40px;
+  }
+
+  .servicios-titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .servicios-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+    grid-template-areas: "piezas     imagen     rapidez"
+                         "calidad    imagen     envios ";
+  }
+
+  .calidad{
+    grid-row: calidad;
+    grid-column: calidad;
+  }
+
+  .piezas{
+    grid-row: piezas;
+    grid-column: piezas;
+  }
+
+  .rapidez{
+    grid-row: rapidez;
+    grid-column: rapidez;
+  }
+
+  .envios{
+    grid-row: envios;
+    grid-column: envios;
+  }
+  
+  
+  .imagen-central{
+    grid-row: imagen;
+    grid-column: imagen;
+    transition:all 0.5s;
+  }
+
+  .imagen-central:hover{
+    transform: scale(1.05);
+  }
+
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .items span{
+    width: 95px;
+    font-size: 40px;
+    color: var(--color-principal);
+    padding: 20px;
+    border: 5px double #dedede;
+    border-radius: 50%;
+    transition: all 0.5s;
+  }
+
+  .items span:hover{
+    background: var(--color-principal);
+    color: white;
+  }
+
+  .items .titulo-item{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .items .texto-item{
+    font-size: 14px;
+    text-align: center;
+    font-style: italic;
+    padding: 5px;
+  }
 
 
 
@@ -257,6 +348,7 @@ body{
 
   .menu-principal i{
     display: block; /*Para mostrar los elementos i cuando la pantalla se encuentre por encima de los 650px*/
+
   }
 
   .menu-navegacion{
@@ -293,7 +385,8 @@ body{
 
   .menu-navegacion .enlaces ul li a,
   .menu-navegacion .sociales a{
-    font-size: 20px;
+    font-size: 15px;
+    color: white;
   }
   
 /*SLIDER PARA DISPOSITIVOS MOVILES (RESPONSIVE RESOLUCION 650PX)*/
@@ -329,6 +422,21 @@ body{
   .descripcion-productos .btn:hover{
     padding: 10px 30px;
   }
+
+
+  /*SECCION SERVICIOS (RESPONSIVE RESOLUCION 850PX)*/
+
+  .servicios-titulos{
+    margin-top: 50px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "piezas    rapidez"
+                         "calidad   envios";
+  }
+
+  .imagen-central{
+  display: none;
+  }
 }
+
 
 
