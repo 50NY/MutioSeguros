@@ -323,7 +323,7 @@ body{
     padding: 5px;
   }
 
-  /*SECCION DE SPONSORS*/
+  /*SECCION DE EQUIPO*/
 
   #Equipo{
     height: 100vh;
@@ -408,8 +408,54 @@ body{
 
 
 
+  /*SECCION DE COMPONENTES*/
 
+  #Componentes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .comp{
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    height: 440px;
+  }
+
+  .imagen-comp{
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .info-comp{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .info-comp p{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.5s;
+  }
+
+  .info-comp:hover {
+    background: rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+  }
+
+  .info-comp:hover p {
+    transform: translateY(15px);
+  }
 
 
 
@@ -479,6 +525,13 @@ body{
 .imagen-productos{
   width: 65%;
 }
+
+/*SEECCION DE COMPONENTES (RESPONSIVE RESOLUCION 650PX)*/
+
+.info-comp .txt-comp{
+  display: none;
+}
+
 
 
 
