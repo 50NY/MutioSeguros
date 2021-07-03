@@ -546,7 +546,74 @@ body{
     display: flex;
     justify-content: flex-end;
   }
+
+  /*ALERTAS*/
+
+  .alertas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alert{
+    width: 60%;
+    padding: 20px 60px;
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+  }
+
+  /*Ocultar aleertas*/
+
+  .alert.show{
+    transform: translateY(50%);
+  }
+  .alert.hide{
+    transform: translateY(-100%);
+  }
+
+  /*Estilos de alertas*/
+
+  .alert .icon-alert{
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+  }
+
+  .alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+  }
+
+  #alertError{
+    background: #f8d7da;
+    border-right: 4px solid #da3748;
+
+  }
+
+  #alertError .icono-alert{
+    color:#da3748;
+  }
+
+  #alertError .msg{
+    color: #721c24;
+  }
   
+  #alertSucces{
+    background: #d4edda;
+    border-right: 4px solid #279e43;
+
+  }
+
+  #alertSucces .icono-alert{
+    color:#279e43;
+  }
+
+  #alertSucces .msg{
+    color: #155724;
+  }
 
 
 
@@ -607,38 +674,48 @@ body{
     color: white;
   }
   
-/*SLIDER PARA DISPOSITIVOS MOVILES (RESPONSIVE RESOLUCION 650PX)*/
-.slider{
+ /*SLIDER PARA DISPOSITIVOS MOVILES (RESPONSIVE RESOLUCION 650PX)*/
+ .slider{
   height: calc(100vh - 600px);
-}
-.imagen-productos{
+ }
+ .imagen-productos{
   width: 65%;
-}
+ }
 
-/*SEECCION DE COMPONENTES (RESPONSIVE RESOLUCION 650PX)*/
+ /*SEECCION DE COMPONENTES (RESPONSIVE RESOLUCION 650PX)*/
 
-.info-comp .txt-comp{
+ .info-comp .txt-comp{
   display: none;
-}
+ }
 
-/*SECCION DE COMPONENTES (RESPONSIVE RESOLUCION 650PX)*/
+ /*SECCION DE COMPONENTES (RESPONSIVE RESOLUCION 650PX)*/
 
-#formulario{
+ #formulario{
   width: 100%;
-}
+ }
 
-.two-fields{
+ .two-fields{
   flex-direction: column;
-}
+ }
 
-.input-ConIcon{
+ .input-ConIcon{
   width: 100%;
+ }
+
+ /*ALERTAS(RESPONSIVE RESOLUCION 650PX)*/
+
+ .alert{
+  width: 100%;
+ }
+
+ .alert .show{
+  transform: translateY(170%);
+ }
+
 }
 
 
 
-
-}
 
 /*SLIDER PARA DISPOSITIVOS MOVILES (RESPONSIVE RESOLUCION 850PX)*/
 

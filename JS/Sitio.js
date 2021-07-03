@@ -48,21 +48,40 @@ var formulario = document.getElementById("formulario");
 function validar(e) {
     var inputNombre = document.getElementById("nombre"),
     inputEmail = document.getElementById("email"),
-    inputComents = document.getElementById("comentarios");
+    inputComents = document.getElementById("comentarios"),
+    alertSucces = document.getElementById("alertSucces"),
+    alertError = document.getElementById("alertError");
 
-    if (inputNombre.value==0 || inputEmail.value==0 ||inputEmail.value==0 ) {
+
+    if (inputNombre.value==0 || inputEmail.value==0 ||inputComents.value==0 ){
       e.preventDefault();
-      alert("Datos vacios");
+      alertError.classList.remove("hide");
+      alertError.classList.add("show");
+      //funcion para sacar el mensaje luego de haberlo mostrado duraante 2 segundos
+      setTimeout(function (){
+        alertError.classList.remove("show");
+        alertError.classList.add("hide");
+      },2000)
     }else{
       e.preventDefault();
-      alert("Datos vacios");
+      alertSucces.classList.remove("hide");
+      alertSucces.classList.add("show");
+
+      //funcion para sacar el mensaje luego de haberlo mostrado duraante 2 segundos
+      setTimeout(function (){
+        alertSucces.classList.remove("show");
+        alertSucces.classList.add("hide");
+      },2000)
+
       inputNombre.value="";
       inputEmail.value="";
       inputComents.value="";
+      alertSucces.classList.remove("hide");
+      alertSucces.classList.add("show");
     }
 
 
 }
 
-formulario.addEventListener("sumbit", validar);
+formulario.addEventListener("submit", validar);
 
