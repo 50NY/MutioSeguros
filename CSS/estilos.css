@@ -51,6 +51,7 @@ body{
   transition: all 0.3s;
 }
 
+
 .btn:hover{
   padding: 15px 50px;
 }
@@ -456,6 +457,63 @@ body{
   .info-comp:hover p {
     transform: translateY(15px);
   }
+
+
+
+  /*SECCION DE CONTACTOS*/
+
+  #Contacto{
+    height: 100vh;
+    padding: 60px;
+    position: relative;
+  }
+
+  #formulario{
+    width: 70%;
+    margin: 50px auto;
+  }
+
+  .two-fields{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-text, .input-email, .text-area{
+    border: 1px solid #b4b4b4;
+    color: #888;
+    background: #fff;
+    outline: none;
+    padding: 15px 60px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+  }
+
+  .text-area{
+    width: 100%;
+    height: 150px;
+    resize: none;
+  }
+
+  .input-text, .input-email{
+    width: 100%;
+  }
+
+  .input-ConIcon{
+    position: relative;
+    width: 48%;
+  }
+
+  .input-ConIcon i{
+    position: absolute;
+    left: 0px;
+    padding: 14px 15px;
+    background: #888;
+    color: #fff;
+  }
+
+  
 
 
 
