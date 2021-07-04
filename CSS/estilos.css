@@ -15,6 +15,10 @@
   font-family: Arial, Helvetica, sans-serif
 }
 
+html{
+ scroll-behavior: smooth;
+}
+
 body{
   background: var(--color-background);
 
@@ -141,6 +145,7 @@ body{
 /*SLIDER DE PRODUCTOS*/
 
   #productos .contenedor-principal{
+    height: 70vh;
     display: flex;
     align-items: center;
     position: relative;
@@ -463,7 +468,7 @@ body{
   /*SECCION DE CONTACTOS*/
 
   #Contacto{
-    height: 100vh;
+    height: 70vh;
     padding: 60px;
     position: relative;
   }
@@ -615,6 +620,100 @@ body{
     color: #155724;
   }
 
+  /*ESTILOS DEL FOOTER*/
+
+  footer{
+    display: flex;
+    margin-top: -100px;
+  }
+
+  .sociales-metodo{
+    width: 25%;
+    height: 100px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden; /*No haya desbordamiento de los elementos*/
+  }
+
+  .sociales-metodo i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 100px;
+    transition: all 0.5s;
+  }
+
+  .sociales-metodo span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    background: var(--color-principal);
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transform: translateY(60px);
+    transition: all 0.5s;
+  }
+
+  .sociales-metodo i:hover + span{
+    transform: translateY(0px);
+  }
+
+  .sociales-metodo i:hover{
+    transform: translateY(-20px);
+  }
+
+    /*BOTON DE IR HACIA ARRIBA*/
+
+    #btn-top{
+      width: 50px;
+      height: 50px;
+      background: var(--color-principal);
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1;
+      transform: translateY(200%);
+      transition: all 0.5s;
+    }
+
+    #btn-top.show{
+      transform: translateY(0);
+    }
+
+    #btn-top.scrollFinal{
+      transform: translateY(-250%);
+    }
+
+    #btn-top span{
+      color: white;
+      font-size: 25px;
+      width: 100%;
+      text-align: center; /*Para alinearlo de forma horizontal*/
+      line-height: 50px;/*Para alinearlo dee forma vertical*/
+      transition: all 0.5s;
+    }
+
+    #btn-top:hover{
+      background: rgba(233, 54, 87, 0.726);
+    }
+
+    #btn-top:hover span{
+      transform: translateY(-3px);
+    }
+    
+
+
+
 
 
 
@@ -710,6 +809,16 @@ body{
 
  .alert .show{
   transform: translateY(170%);
+ }
+
+  /*FOOTTER(RESPONSIVE RESOLUCION 650PX)*/
+
+ footer{
+   flex-wrap: wrap;
+ }
+
+ .sociales-metodo{
+   width: 50%;
  }
 
 }
